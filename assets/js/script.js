@@ -7,6 +7,7 @@
 
 // need weather map API to pull temp wind humidity and emoji for current
 //
+$(document).ready(function() {
 
 $('.sButton').on("click", function getForecast() {
     var userInput = $('.userText').val();
@@ -25,4 +26,5 @@ $('.sButton').on("click", function getForecast() {
         });
 });
 
+});
 //need // need weather map API to pull temp wind humidity and emoji for 5 day forecast
