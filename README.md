@@ -4,7 +4,7 @@ full stack web development bootcamp module 6 challenge (Weather Forecast Web App
 
 API key 8d0559dcdc2fc933fe6e461791fc0b68
 
-https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={8d0559dcdc2fc933fe6e461791fc0b68}
+https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=8d0559dcdc2fc933fe6e461791fc0b68
 
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city

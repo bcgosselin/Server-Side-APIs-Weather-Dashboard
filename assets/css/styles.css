@@ -1,4 +1,4 @@
-
+/* header */
 h1 {
     display: flex;
     justify-content: center;
@@ -6,6 +6,7 @@ h1 {
     color: white;
 }
 
+/* main */
 .content {
     display: flex;
 }
@@ -13,8 +14,11 @@ h1 {
 /* sidebar search/history */
 form {
     justify-content: left;
-    flex-direction: column;
     margin-right: 80%;
+}
+
+form.button {
+    flex-direction: column;
 }
 
 .history {
@@ -29,7 +33,7 @@ button {
     margin: .2rem;
 }
 
-/* current weather */
+/* current/forecast weather */
 .cWeather,
 .fWeather {
     display: inline-flex;
