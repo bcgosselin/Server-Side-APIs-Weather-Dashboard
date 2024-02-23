@@ -15,31 +15,76 @@
 
     <!-- search/user input -->
     <div id="content">
-        <div class="search" id="search">
-            <form>
-                <textarea id="userText"></textarea>
-                <button id="sButton">Search</button>
-            </form>
+        <div id="topContainer">
+            <div class="search" id="search">
+                <form>
+                    <textarea id="userText"></textarea>
+                    <button id="sButton">Search</button>
+                    <button id="btn1">1</button>
+                    <button id="btn2">2</button>
+                    <button id="btn3">3</button>
+                    <button id="btn4">4</button>
+                    <button id="btn5">5</button>
+                </form>
+            </div>
+
+            <!-- current weather -->
+            <div class="cWeather" id="cWeather">
+                <p><span id="cCity"></span><img id="cWeatherIcon" alt="Weather Icon"></p>
+                <p></p>
+                <p>Temperature: <span id="cTemperature"></span></p>
+                <p>Wind Speed: <span id="cWindSpeed"></span></p>
+                <p>Humidity: <span id="cHumidity"></span></p>
+
+            </div>
         </div>
 
-        <!-- current weather -->
-        <div class="cWeather" id="fWeather">
-            current
+        <div id="bottomContainer">
+
+            <!-- forecast weather -->
+            <div class="fWeather" id="fWeather">
+                <div class="f1Weather" id="f1Weather">
+                    <p><span id="f1Date"></span></p>
+                    <p><img id="f1WeatherIcon" alt="Weather Icon"></p>
+                    <p>Temperature: <span id="f1Temperature"></span></p>
+                    <p>Wind Speed: <span id="f1WindSpeed"></span></p>
+                    <p>Humidity: <span id="f1Humidity"></span></p>
+                </div>
+
+                <div class="f2Weather" id="f2Weather">
+                    <p><span id="f2Date"></span></p>
+                    <p><img id="f2WeatherIcon" alt="Weather Icon"></p>
+                    <p>Temperature: <span id="f2Temperature"></span></p>
+                    <p>Wind Speed: <span id="f2WindSpeed"></span></p>
+                    <p>Humidity: <span id="f2Humidity"></span></p>
+                </div>
+
+                <div class="f3Weather" id="f3Weather">
+                    <p><span id="f3Date"></span></p>
+                    <p><img id="f3WeatherIcon" alt="Weather Icon"></p>
+                    <p>Temperature: <span id="f3Temperature"></span></p>
+                    <p>Wind Speed: <span id="f3WindSpeed"></span></p>
+                    <p>Humidity: <span id="f3Humidity"></span></p>
+                </div>
+
+                <div class="f4Weather" id="f4Weather">
+                    <p><span id="f4Date"></span></p>
+                    <p><img id="f4WeatherIcon" alt="Weather Icon"></p>
+                    <p>Temperature: <span id="f4Temperature"></span></p>
+                    <p>Wind Speed: <span id="f4WindSpeed"></span></p>
+                    <p>Humidity: <span id="f4Humidity"></span></p>
+                </div>
+
+                <div class="f5Weather" id="f5Weather">
+                    <p><span id="f5Date"></span></p>
+                    <p><img id="f5WeatherIcon" alt="Weather Icon"></p>
+                    <p>Temperature: <span id="f5Temperature"></span></p>
+                    <p>Wind Speed: <span id="f5WindSpeed"></span></p>
+                    <p>Humidity: <span id="f5Humidity"></span></p>
+                </div>
+            </div>
         </div>
 
-        <!-- history -->
-        <div class="history" id="history">
-            <button id="btn1">1</button>
-            <button id="btn2">2</button>
-            <button id="btn3">3</button>
-            <button id="btn4">4</button>
-            <button id="btn5">5</button>
-        </div>
-
-        <!-- forecast weather -->
-        <div class="fWeather" id="fWeather">
-            forecast
-        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

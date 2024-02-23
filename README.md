@@ -6,6 +6,11 @@ API key 8d0559dcdc2fc933fe6e461791fc0b68
 
 https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=8d0559dcdc2fc933fe6e461791fc0b68
 
+https://openweathermap.org/weather-conditions
+
+fweather https://openweathermap.org/forecast5
+
+
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
