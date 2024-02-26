@@ -1,22 +1,63 @@
-# module-6-challenge
-full stack web development bootcamp module 6 challenge (Weather Forecast Web App)
+# module-5-challenge
 
+Full Stack Web Development Project 6
 
-API key 8d0559dcdc2fc933fe6e461791fc0b68
+https://bcgosselin.github.io/module-6-challenge/
 
-https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=8d0559dcdc2fc933fe6e461791fc0b68
+## Description
 
-https://openweathermap.org/weather-conditions
+This project is Robert Gosselin's sixth web application challenge. This project was created to showcase his skills and aptitude using only text based instructions. This webpage's index, script, and style sheet was hand written utilizing credited resources [Credits](#credits). The goal of this challenge was to develop and engineer a fuctioning Weather Dashboard on a live website. Everything included was apart of an ongoing bootcamp to develop and hone Full Stack Web Development skills.
 
-fweather https://openweathermap.org/forecast5
+## Table of Contents (Optional)
 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+## Installation
+
+NA
+
+## Usage
+
+Feel free to view below screenshot (ctrl + click).
+
+![alt text](assets/images/screenshot.png)
+
+## Credits
+utilized for localStorage
+    https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+utilized for fetch data/results
+    tutor via slack
+
+utilized for pop
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
+
+utilized for unshift
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
+
+## License
+
+MIT License
+
+Copyright (c) [2023] [Robert Gosselin]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

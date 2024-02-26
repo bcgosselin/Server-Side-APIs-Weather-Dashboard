@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css link -->
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- debug link -->
     <!-- <link rel="stylesheet" href="./debug.css"> -->
     <title>Weather App</title>
 </head>
@@ -30,18 +32,18 @@
 
             <!-- current weather -->
             <div class="cWeather" id="cWeather">
-                <p><span id="cCity"></span><img id="cWeatherIcon" alt="Weather Icon"></p>
-                <p></p>
+                <p><span id="cCity"></span></p><p id="cDate"></p>
+                <p><img id="cWeatherIcon" alt="Weather Icon"></p>
                 <p>Temperature: <span id="cTemperature"></span></p>
                 <p>Wind Speed: <span id="cWindSpeed"></span></p>
                 <p>Humidity: <span id="cHumidity"></span></p>
 
             </div>
         </div>
-
+        
+        <!-- forecast weather -->
         <div id="bottomContainer">
-
-            <!-- forecast weather -->
+            <p id="title">5 Day Forecast:</p>
             <div class="fWeather" id="fWeather">
                 <div class="f1Weather" id="f1Weather">
                     <p><span id="f1Date"></span></p>
@@ -87,8 +89,10 @@
 
     </div>
 
+    <!-- jQuery CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- js link -->
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

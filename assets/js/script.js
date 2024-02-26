@@ -1,6 +1,12 @@
 $(document).ready(function() {
+    
     var apiKey = '8d0559dcdc2fc933fe6e461791fc0b68';
+    const currentDate = new Date().toDateString();
+    var displayDate = $('#cDate');
 
+    displayDate.text(currentDate);
+
+    // event listener that runs function to search for user inputed city name and push into localStorage and data or results respectivly
     $('#sButton').on("click", function(event) {
         event.preventDefault();
 
@@ -8,11 +14,23 @@ $(document).ready(function() {
         var apiCWeather = 'https://api.openweathermap.org/data/2.5/weather?q=' + encodeURLComponent + '&lang=en&units=imperial&appid=' + apiKey;
         var apiFWeather = 'https://api.openweathermap.org/data/2.5/forecast?q=' + encodeURLComponent + '&lang=en&units=imperial&appid=' + apiKey;
         
+        var userInput = $('#userText').val();
+        var cities = JSON.parse(localStorage.getItem("cities")) || [];
+
+        cities.unshift(userInput);
+
+        if (cities.length > 5) {
+            cities.pop();
+        }
+
+        localStorage.setItem("cities", JSON.stringify(cities));
+
+        updateButtons(cities);
+        
         fetch(apiCWeather)
             .then(function(response) {
                 if (response.ok) {
                     response.json().then(function(data) {
-                        console.log(data);
                         
                         displayCWeather(data);
                     });
@@ -23,17 +41,15 @@ $(document).ready(function() {
             .then(function(response) {
                 if (response.ok) {
                     response.json().then(function(results) {
-                        console.log(results);
                         
                         displayFWeather(results);
                     });
                 }
             });
-
     });
 
+    // function that displays current weather data specified by user input
     function displayCWeather(data) {
-        // var cDate = ???
         var cCity = data.name;
         var cTemp = data.main.temp;
         var cWind = data.wind.speed;
@@ -46,10 +62,9 @@ $(document).ready(function() {
         document.getElementById('cWindSpeed').textContent = cWind + ' MPH';
         document.getElementById('cHumidity').textContent = cHumidity + '%';
         document.getElementById('cWeatherIcon').src = cIcon;
-        
-        // console.log(cCity, cTemp, cWind, cHumidity, cSymbol, cIcon);
     }
 
+    // function that displays forecasted weather results specified by user input
     function displayFWeather(results) {
         var f1Date = results.list[2].dt_txt;
         var f2Date = results.list[10].dt_txt;
@@ -115,8 +130,54 @@ $(document).ready(function() {
         document.getElementById('f5WindSpeed').textContent = f5Wind + ' MPH';
         document.getElementById('f5Humidity').textContent = f5Humidity + '%';
         document.getElementById('f5WeatherIcon').src = f5Icon;
-
-    console.log(f1Date, f1Temp, f1Wind, f1Humidity, f1Symbol, f1Icon);
     };
+
+    // function that updates buttons from localStorage array
+    function updateButtons(cities) {
+        for (var i = 0; i < cities.length; i++) {
+            var buttonId = "#btn" + (i + 1);
+            $(buttonId).text(cities[i]);
+        }
+    }
+
+    var cities = JSON.parse(localStorage.getItem("cities")) || [];
+    updateButtons(cities);
+
+    // function that allows buttons to rerun api search functions
+    function storageWeather(cityName) {
+
+        var storageCWeather = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&lang=en&units=imperial&appid=' + apiKey;
+        var storageFWeather = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&lang=en&units=imperial&appid=' + apiKey;
+
+        fetch(storageCWeather)
+            .then(function(response) {
+                if (response.ok) {
+                    response.json().then(function(data) {
+                        
+                        displayCWeather(data);
+                    });
+                }
+            });
+
+        fetch(storageFWeather)
+            .then(function(response) {
+                if (response.ok) {
+                    response.json().then(function(results) {
+  
+                        displayFWeather(results);
+                    });
+                }
+            });
+    }
+
+    // event listener for localStorage buttons
+    $('#btn1, #btn2, #btn3, #btn4, #btn5').on('click', function(event) {
+        event.preventDefault();
+
+        var cityName = $(this).text();
+        
+        storageWeather(cityName);
+    
+    });
 
 });
