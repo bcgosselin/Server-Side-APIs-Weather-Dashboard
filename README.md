@@ -1,8 +1,9 @@
-# module-5-challenge
+# Server-Side APIs: Weather Dashboard
 
 Full Stack Web Development Project 6
 
-https://bcgosselin.github.io/module-6-challenge/
+## Live Web App
+https://bcgosselin.github.io/Server-Side-APIs-Weather-Dashboard/
 
 ## Description
 
