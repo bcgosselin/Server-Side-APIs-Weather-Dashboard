@@ -1,6 +1,6 @@
 # Server-Side APIs: Weather Dashboard
 
-Full Stack Web Development Project 6
+Constructed a weather dashboard with city search functionality, utilizing the OpenWeather API. Fetched and displayed current and future weather conditions with search history functionality. Created a responsive user interface with dynamically updated content.
 
 ## Live Web App
 https://bcgosselin.github.io/Server-Side-APIs-Weather-Dashboard/
